@@ -1,7 +1,6 @@
 import uuid
 
 class Tarea:
-    # Estados válidos y transiciones permitidas
     VALID_STATES = ["nuevo", "En Progreso", "Finalizada"]
     STATE_TRANSITIONS = {
         "nuevo": ["En Progreso"],
@@ -14,8 +13,8 @@ class Tarea:
         self.title = title
         self.description = description
         self.status = status
-        self.assignments = []    # Lista de dicts { "usuario": alias, "rol": rol }
-        self.dependencies = []   # Lista de ids de tareas
+        self.assignments = []    
+        self.dependencies = []  
 
     def to_dict(self):
         return {
@@ -28,10 +27,8 @@ class Tarea:
         }
 
     def update_state(self, new_state: str):
-        # Validar estado
         if new_state not in Tarea.VALID_STATES:
             raise ValueError(f"Estado inválido: {new_state}")
-        # Verificar transición permitida
         allowed = Tarea.STATE_TRANSITIONS.get(self.status, [])
         if new_state not in allowed:
             raise ValueError(f"Transición de '{self.status}' a '{new_state}' no permitida")

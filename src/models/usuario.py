@@ -1,12 +1,12 @@
 class Usuario:
-    def __init__(self, user_id, name, email):
-        self.id = user_id
+    def __init__(self, id: str, alias: str, name: str):
+        self.id = id
+        self.alias = alias
         self.name = name
-        self.email = email
 
-    def get_user_info(self):
+    def to_dict(self):
         return {
             "id": self.id,
-            "name": self.name,
-            "email": self.email
+            "alias": self.alias,
+            "name": self.name
         }

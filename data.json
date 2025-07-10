@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "d209edee-0be3-41da-ab91-304a52015ff0",
+      "alias": "juan",
+      "name": "Juan P\u00e9rez"
+    },
+    {
+      "id": "99c41779-9e87-43f8-a595-d993fd08b1cc",
+      "alias": "maria",
+      "name": "Mar\u00eda P\u00e9rez"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "34f54d61-1ac8-4a59-af7b-1bfd0dbec449",
+      "title": "Implementar login",
+      "description": "Crear endpoints de autenticaci\u00f3n",
+      "status": "En Progreso",
+      "assignments": [
+        {
+          "task_id": "34f54d61-1ac8-4a59-af7b-1bfd0dbec449",
+          "usuario": "juan",
+          "rol": "programador"
+        }
+      ],
+      "dependencies": []
+    }
+  ]
+}

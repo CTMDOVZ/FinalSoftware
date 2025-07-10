@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, abort
 from src.data_handler import DataHandler
 
 app = Flask(__name__)
-# Si más adelante cambias a SQLAlchemy, aquí iría la configuración de la base de datos.
 handler = DataHandler()
 
 @app.route('/usuarios', methods=['GET'])
